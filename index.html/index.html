@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Profesia de Programator</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5f);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #00ffcc;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.card {
+    background: #2b2b40;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 700px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #3f3f70;
+    transform: scale(1.03);
+}
+
+.content {
+    display: none;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #00ffcc;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.fact {
+    margin-top: 10px;
+    color: #00ffcc;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>💻 Profesia de Programator</h1>
+    <p>Viitorul este digital 🚀</p>
+</header>
+
+<nav>
+    <a href="#despre">Despre</a>
+    <a href="#avantaje">Avantaje</a>
+    <a href="#facts">Facts</a>
+</nav>
+
+<!-- DESPRE -->
+<section id="despre">
+
+<div class="card" onclick="toggle(this)">
+    <h2>Ce face un programator?</h2>
+    <div class="content">
+        <p>
+        Un programator este o persoană care creează software folosind diferite limbaje de programare.
+        Acesta poate dezvolta aplicații mobile, jocuri video, site-uri web sau chiar sisteme complexe
+        folosite în medicină, industrie sau inteligență artificială. Programatorii rezolvă probleme,
+        creează soluții digitale și contribuie la dezvoltarea tehnologiei moderne.
+        </p>
+    </div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+    <h2>Unde lucrează programatorii?</h2>
+    <div class="content">
+        <p>
+        Programatorii pot lucra în companii IT, firme de jocuri, bănci sau chiar de acasă.
+        Mulți aleg să fie freelanceri și să lucreze pentru clienți din întreaga lume.
+        Această profesie oferă flexibilitate și posibilitatea de a călători, lucrând în același timp online.
+        </p>
+    </div>
+</div>
+
+</section>
+
+<!-- AVANTAJE -->
+<section id="avantaje">
+
+<div class="card" onclick="toggle(this)">
+    <h2>Avantajele profesiei</h2>
+    <div class="content">
+        <p>
+        Profesia de programator este una dintre cele mai bine plătite din lume.
+        Există o cerere mare pentru specialiști IT, ceea ce oferă stabilitate și oportunități
+        de angajare rapide. În plus, programatorii pot lucra de oriunde, având nevoie doar de un laptop și internet.
+        </p>
+    </div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+    <h2>De ce să devii programator?</h2>
+    <div class="content">
+        <p>
+        Dacă îți place tehnologia și vrei să creezi lucruri utile sau interesante, programarea este o alegere excelentă.
+        Poți construi propriile aplicații, jocuri sau chiar afaceri online.
+        Este o profesie de viitor, deoarece tehnologia devine din ce în ce mai importantă în viața noastră.
+        </p>
+    </div>
+</div>
+
+</section>
+
+<!-- FACTS -->
+<section id="facts">
+
+<div class="card">
+    <h2>🎯 Facts interesante</h2>
+    <button onclick="showFact()">Apasă pentru fact</button>
+    <p class="fact" id="factText"></p>
+</div>
+
+</section>
+
+<script>
+function toggle(element) {
+    const content = element.querySelector(".content");
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+
+function showFact() {
+    const facts = [
+        "Primul programator a fost Ada Lovelace.",
+        "Primul bug real a fost un insect găsit într-un calculator.",
+        "Există peste 700 de limbaje de programare.",
+        "Programatorii pot lucra din orice țară.",
+        "Jocurile video sunt create prin cod."
+    ];
+
+    const random = Math.floor(Math.random() * facts.length);
+    document.getElementById("factText").innerText = facts[random];
+}
+</script>
+
+</body>
+</html>
